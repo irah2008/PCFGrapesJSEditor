@@ -14,7 +14,7 @@ export class GrapeJSTemplate implements ComponentFramework.StandardControl<IInpu
 	private _js: string | any;
 	private _editor: any;
 	private _notifyOutputChanged: () => void;
-	private _updatedfromDOM:Boolean;
+	private _updatedfromDOM: Boolean;
 	/**
 	 * Empty constructor.
 	 */
@@ -35,8 +35,19 @@ export class GrapeJSTemplate implements ComponentFramework.StandardControl<IInpu
 		this._context = context;
 		this._container = container;
 		this._notifyOutputChanged = notifyOutputChanged;
-		this._updatedfromDOM=false;
+		this._updatedfromDOM = false;
+		var disabled = context.mode.isControlDisabled
+		var visible = context.mode.isVisible
 		debugger;
+		if (disabled) {
+			if (context.parameters.multiLineHTML.raw != null)
+				this._container.innerHTML = context.parameters.multiLineHTML.raw;
+			return;
+		}
+		if (!visible) {
+			this._container.hidden = true;
+		}
+
 		var editorConfig = {
 			container: this._container,
 			components: this._context.parameters.multiLineHTML.raw,
@@ -57,7 +68,7 @@ export class GrapeJSTemplate implements ComponentFramework.StandardControl<IInpu
 	}
 	public onValueChange(editor: any) {
 		this._html = editor.Commands.get('gjs-get-inlined-html').run(editor);
-		this._updatedfromDOM=true;
+		this._updatedfromDOM = true;
 		this._notifyOutputChanged();
 	}
 
@@ -66,9 +77,9 @@ export class GrapeJSTemplate implements ComponentFramework.StandardControl<IInpu
 	 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
-		if (this._updatedfromDOM){
-			if(this._html==context.parameters.multiLineHTML.raw)
-			this._updatedfromDOM=false;
+		if (this._updatedfromDOM) {
+			if (this._html == context.parameters.multiLineHTML.raw)
+				this._updatedfromDOM = false;
 			return;
 		}
 		this._html = context.parameters.multiLineHTML.raw;
