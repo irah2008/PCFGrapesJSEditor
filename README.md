@@ -5,7 +5,7 @@ A PowerApps Component Framework Control to change multiline Text into HTML Drag 
 
 
 Please refer below for more information
-https://crm2011byhari.blogspot.com/2019/11/my-first-pcf-control-activity-analyzer.html
+https://crm2011byhari.blogspot.com/2020/01/grapesjs-editor-pcf-control-for.html
 
 
 To download the CRM Solution click below link
