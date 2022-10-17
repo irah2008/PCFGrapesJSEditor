@@ -14,8 +14,8 @@
     "@types/powerapps-component-framework": "^1.2.0",
     "backbone": "^1.4.0",
     "cash": "^0.8.0",
-    "grapesjs": "^0.15.10",
-    "grapesjs-preset-newsletter": "^0.2.20",
+    "grapesjs": "^0.20.1",
+    "grapesjs-preset-newsletter": "^0.2.21",
     "grapesjs-react": "^3.0.1"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="TemplateManager" constructor="GrapeJSTemplate" version="0.0.6" display-name-key="GrapeJSTemplate" description-key="GrapeJSTemplate description" control-type="standard">
+  <control namespace="TemplateManager" constructor="GrapeJSTemplate" version="0.0.10" display-name-key="GrapeJSTemplate" description-key="GrapeJSTemplate description" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="multiLineHTML" display-name-key="multiLineHTMLField" description-key="Multi Line HTML Field" of-type="Multiple" usage="bound" required="true" />
     <!-- 
