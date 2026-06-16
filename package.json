@@ -15,7 +15,7 @@
     "backbone": "^1.4.0",
     "cash": "^0.8.0",
     "grapesjs": "^0.20.1",
-    "grapesjs-preset-newsletter": "^0.2.21",
+    "grapesjs-preset-newsletter": "^1.0.2",
     "grapesjs-react": "^3.0.1"
   },
   "devDependencies": {
